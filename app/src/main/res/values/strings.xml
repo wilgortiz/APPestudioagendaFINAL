@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">estudioAgenda</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Salir</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_apuntes">Apuntes</string>
+    <string name="menu_calendario">Calendario</string>
+    <string name="menu_profes">Profes</string>
+    <string name="menu_contactos">Contactos</string>
+    <string name="menu_salir">Salir</string>
+    <string name="menu_faltas">Faltas</string>
+    <string name="menu_materias">Materias</string>
+    <string name="menu_notas">Notas</string>
+    <string name="menu_horarios">Horarios</string>
+
+
+    <string-array name="periodos">
+        <item>todos</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>

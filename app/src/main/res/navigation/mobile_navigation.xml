@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.nombreempresa.estudioagenda.ui.apuntes.ApuntesFragment"
+        android:label="@string/menu_apuntes"
+        tools:layout="@layout/fragment_apuntes" />
+
+    <fragment
+        android:id="@+id/nav_calendario"
+        android:name="com.nombreempresa.estudioagenda.ui.calendario.CalendarioFragment"
+        android:label="@string/menu_calendario"
+        tools:layout="@layout/fragment_calendario" />
+
+    <fragment
+        android:id="@+id/nav_profes"
+        android:name="com.nombreempresa.estudioagenda.ui.profes.ProfesFragment"
+        android:label="@string/menu_profes"
+        tools:layout="@layout/fragment_profes" />
+
+    <fragment
+        android:id="@+id/nav_contactos"
+        android:name="com.nombreempresa.estudioagenda.ui.contactos.ContactosFragment"
+        android:label="@string/menu_contactos"
+        tools:layout="@layout/fragment_contactos" />
+
+    <fragment
+        android:id="@+id/nav_materias"
+        android:name="com.nombreempresa.estudioagenda.ui.materias.MateriasFragment"
+        android:label="@string/menu_materias"
+        tools:layout="@layout/fragment_materias" />
+
+    <fragment
+        android:id="@+id/nav_horarios"
+        android:name="com.nombreempresa.estudioagenda.ui.Horarios.HorariosFragment"
+        android:label="@string/menu_horarios"
+        tools:layout="@layout/fragment_horarios" />
+
+    <fragment
+        android:id="@+id/nav_notas"
+        android:name="com.nombreempresa.estudioagenda.ui.notas.NotasFragment"
+        android:label="@string/menu_notas"
+        tools:layout="@layout/fragment_notas" />
+
+    <fragment
+        android:id="@+id/nav_faltas"
+        android:name="com.nombreempresa.estudioagenda.ui.faltas.FaltasFragment"
+        android:label="@string/menu_faltas"
+        tools:layout="@layout/fragment_faltas" />
+
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.nombreempresa.estudioagenda.ui.salir.SalirFragment"
+        android:label="@string/menu_salir"
+        tools:layout="@layout/fragment_salir" />
+</navigation>

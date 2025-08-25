@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_apuntes"
+            android:title="@string/menu_apuntes" />
+
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/calendar"
+            android:title="@string/menu_calendario" />
+
+        <item
+            android:id="@+id/nav_profes"
+            android:icon="@drawable/ic_profe"
+            android:title="@string/menu_profes" />
+
+        <item
+            android:id="@+id/nav_materias"
+            android:icon="@drawable/book_solid"
+            android:title="@string/menu_materias" />
+
+        <item
+            android:id="@+id/nav_horarios"
+            android:icon="@drawable/ic_horarios"
+            android:title="@string/menu_horarios" />
+
+        <item
+            android:id="@+id/nav_notas"
+            android:icon="@drawable/ic_notas"
+            android:title="@string/menu_notas" />
+
+        <item
+            android:id="@+id/nav_faltas"
+            android:icon="@drawable/ic_faltas"
+            android:title="@string/menu_faltas" />
+
+        <item
+            android:id="@+id/nav_contactos"
+            android:icon="@drawable/ic_contactos"
+            android:title="@string/menu_contactos" />
+
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/logout"
+            android:title="@string/menu_salir" />
+</group>
+</menu>

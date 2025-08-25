@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/rounded_border_color3"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Layout para la materia -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- TextView para mostrar la materia -->
+        <TextView
+            android:id="@+id/tvMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <!-- TextView para mostrar las faltas permitidas -->
+        <TextView
+            android:id="@+id/tvFaltasPermitidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#F44336"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Layout para los botones y el TextView de faltas -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Botón para quitar falta -->
+        <Button
+            android:id="@+id/btnQuitarFalta"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:text="-"
+            android:textSize="20sp" />
+
+        <!-- TextView para mostrar el número de faltas -->
+        <TextView
+            android:id="@+id/tvFaltas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Botón para agregar falta -->
+        <Button
+            android:id="@+id/btnAgregarFalta"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:text="+"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

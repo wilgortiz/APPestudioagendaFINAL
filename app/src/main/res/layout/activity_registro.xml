@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.registro.RegistroActivity">
+
+    <!-- Nombre -->
+    <TextView
+        android:id="@+id/tvRegistroTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Registro de Estudiantes"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nombre"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/etRegistroNombre"
+        app:layout_constraintTop_toBottomOf="@id/tvRegistroTitulo" />
+
+    <EditText
+        android:id="@+id/etRegistroNombre"
+        android:layout_width="316dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_border"
+        android:hint="Ingrese su Nombre"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre" />
+
+    <!-- Apellido -->
+    <TextView
+        android:id="@+id/tvApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Apellido"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/etRegistroApellido"
+        app:layout_constraintTop_toBottomOf="@id/etRegistroNombre" />
+
+    <EditText
+        android:id="@+id/etRegistroApellido"
+        android:layout_width="316dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_border"
+        android:hint="Ingrese su Apellido"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvApellido" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Correo electrónico"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/etRegistroEmail"
+        app:layout_constraintTop_toBottomOf="@id/etRegistroApellido" />
+
+    <EditText
+        android:id="@+id/etRegistroEmail"
+        android:layout_width="316dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_border"
+        android:hint="Ingrese su email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <!-- Contraseña -->
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Contraseña"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/etRegistroPassword"
+        app:layout_constraintTop_toBottomOf="@id/etRegistroEmail" />
+
+    <EditText
+        android:id="@+id/etRegistroPassword"
+        android:layout_width="316dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_border"
+        android:hint="Ingrese su Contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPassword" />
+
+    <!-- Botón Registro -->
+    <Button
+        android:id="@+id/btRegistro"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etRegistroPassword" />
+
+    <!-- Botón Limpiar campos -->
+       <Button
+        android:id="@+id/btLimpiarCampos"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="#AFAEAE"
+        android:text="Limpiar Campos"
+        app:iconTint="#575454"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btRegistro" />
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="9dp"
+        android:backgroundTint="#FFC107"
+        android:text="Ir a Login"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btLimpiarCampos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

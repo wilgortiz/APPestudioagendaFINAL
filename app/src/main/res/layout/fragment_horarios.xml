@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Controles de navegación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btnPrevWeek"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="&lt;"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txtWeekRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Semana actual"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnNextWeek"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="&gt;"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- Encabezado de días -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#3F51B5"
+            android:elevation="4dp">
+
+            <!-- Espacio para las horas (50dp para coincidir con el ancho de las horas) -->
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"/>
+
+            <!-- Contenedor de días -->
+            <LinearLayout
+                android:id="@+id/daysHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7"/>
+        </LinearLayout>
+
+        <!-- Contenedor principal del calendario -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- ScrollView sincronizado para horas -->
+            <ScrollView
+                android:id="@+id/hoursScrollView"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:overScrollMode="never">
+
+                <!-- Columna de horas -->
+                <LinearLayout
+                    android:id="@+id/hoursColumn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@android:color/white"/>
+            </ScrollView>
+
+            <!-- Contenedor principal con scroll horizontal -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/hoursScrollView"
+                android:fillViewport="true">
+
+                <!-- ScrollView para el contenedor de días -->
+                <ScrollView
+                    android:id="@+id/daysScrollView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/daysContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        />
+                </ScrollView>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Botón flotante -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgregarHorario"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:backgroundTint="#FF9800"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:text="+"
+        android:textSize="36sp"
+        app:cornerRadius="16dp"
+        app:elevation="6dp"
+        app:iconGravity="textTop"
+        app:iconTint="@android:color/white"/>
+</FrameLayout>
