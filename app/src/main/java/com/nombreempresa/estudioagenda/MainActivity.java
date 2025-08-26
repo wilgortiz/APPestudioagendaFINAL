@@ -75,6 +75,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -183,21 +184,45 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Error", "No hay headers en el NavigationView");
         }
     }
-
-
     private void solicitarPermisoNotificaciones() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     "event_channel",
                     "Eventos",
-                    NotificationManager.IMPORTANCE_HIGH  // Cambiado a HIGH para mayor prioridad
+                    NotificationManager.IMPORTANCE_HIGH
             );
             channel.setDescription("Notificaciones de eventos del calendario");
 
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
+
+        // Android 13+ → pedir permiso en tiempo de ejecución
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(
+                        new String[]{android.Manifest.permission.POST_NOTIFICATIONS},
+                        101
+                );
+            }
+        }
     }
+
+
+//    private void solicitarPermisoNotificaciones() {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            NotificationChannel channel = new NotificationChannel(
+//                    "event_channel",
+//                    "Eventos",
+//                    NotificationManager.IMPORTANCE_HIGH  // Cambiado a HIGH para mayor prioridad
+//            );
+//            channel.setDescription("Notificaciones de eventos del calendario");
+//
+//            NotificationManager manager = getSystemService(NotificationManager.class);
+//            manager.createNotificationChannel(channel);
+//        }
+//    }
 
     private void verificarPermisosAlarmas() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -216,6 +241,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

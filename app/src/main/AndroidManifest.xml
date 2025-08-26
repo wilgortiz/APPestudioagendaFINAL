@@ -22,13 +22,6 @@
             android:name=".ui.olvidarClave.OlvidarClaveActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.OlvidarClave.OlvidarClaveActivity"
-            android:exported="false"
-            android:theme="@style/Theme.EstudioAgenda" />
-        <activity
-            android:name=".ui.olvidoClave.olvidoClaveActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.registro.RegistroActivity"
             android:exported="false" />
         <activity

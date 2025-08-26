@@ -81,7 +81,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_border"
         android:hint="Ingrese su Contraseña"
-        android:text="A123456789"
+        android:text="A1234567"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textStyle="italic"
