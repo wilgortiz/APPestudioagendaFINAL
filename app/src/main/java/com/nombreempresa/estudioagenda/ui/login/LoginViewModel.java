@@ -55,9 +55,9 @@ public class LoginViewModel extends AndroidViewModel {
                         String fullToken = "Bearer " + token;
                         Log.d("TOKEN_TEST", "Token recibido del servidor: " + token);
                         Log.d("TOKEN_TEST", "Token completo a guardar: " + fullToken);
-                        
+
                         ApiClient.guardarToken(fullToken, context);
-                        
+
                         // Verificar que se guardó correctamente
                         String savedToken = ApiClient.leerToken(context);
                         if (savedToken.equals(fullToken)) {
@@ -118,4 +118,31 @@ public class LoginViewModel extends AndroidViewModel {
         });
 
     }
+
+    //metodo para que envie una clave aleatoria al mail(mailtrap), despues la podemos cambiar
+    public void recuperarClave(String email) {
+        ApiClient.MisEndpoints api = ApiClient.getEndPoints();
+        Call<Void> call = api.olvidoClave(email);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    if (mMensaje != null) {
+                        mMensaje.postValue("Nueva clave enviada al correo");
+                        // Agregue un flag para indicar que fue exitoso
+                        mMensaje.postValue("EXITO:" + "Nueva clave enviada al correo (Mailtrap).");
+                    }
+                } else {
+                    if (mMensaje != null) mMensaje.postValue("Error al enviar correo: " + response.code());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                if (mMensaje != null) mMensaje.postValue("Fallo de conexión: " + t.getMessage());
+            }
+        });
+    }
+
 }

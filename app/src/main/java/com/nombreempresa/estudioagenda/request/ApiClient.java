@@ -11,6 +11,7 @@ import com.google.gson.GsonBuilder;
 import com.nombreempresa.estudioagenda.modelos.Actividades;
 import com.nombreempresa.estudioagenda.modelos.Apuntes;
 import com.nombreempresa.estudioagenda.modelos.Calificaciones;
+import com.nombreempresa.estudioagenda.modelos.CambioClave;
 import com.nombreempresa.estudioagenda.modelos.Contactos;
 import com.nombreempresa.estudioagenda.modelos.Estudiante;
 import com.nombreempresa.estudioagenda.modelos.FaltaActualizacionDTO;
@@ -122,7 +123,13 @@ public class ApiClient {
          @POST("Login/Registro")
         Call<RegistroResponse> registro(@Body RegistroEstudiante request);
 
-         //APUNTES
+        @POST("Login/CambiarClave")
+        Call<Void> cambiarClave(@Header("Authorization") String token, @Body CambioClave cambioClave);
+
+        @POST("Login/OlvidoClave")
+        Call<Void> olvidoClave(@Body String email);
+
+        //APUNTES
 
             //@GET("Apuntes")
             //Call<List<Apuntes>> obtenerTodosLosApuntes(@Header("Authorization") String token);

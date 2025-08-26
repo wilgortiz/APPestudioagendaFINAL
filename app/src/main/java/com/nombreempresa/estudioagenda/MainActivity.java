@@ -84,6 +84,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 
 import com.google.android.material.navigation.NavigationView;
@@ -115,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        setSupportActionBar(binding.appBarMain.toolbar);
+
 
         // Solicitar permiso para notificaciones (Android 13+)
         solicitarPermisoNotificaciones();

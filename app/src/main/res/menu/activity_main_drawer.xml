@@ -45,6 +45,11 @@
             android:title="@string/menu_contactos" />
 
         <item
+            android:id="@+id/nav_CambioClave"
+            android:icon="@drawable/cambioclave"
+            android:title="@string/menu_cambioclave" />
+
+        <item
             android:id="@+id/nav_salir"
             android:icon="@drawable/logout"
             android:title="@string/menu_salir" />

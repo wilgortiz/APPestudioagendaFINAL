@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.nombreempresa.estudioagenda.R;
 import com.nombreempresa.estudioagenda.databinding.ActivityLoginBinding;
+import com.nombreempresa.estudioagenda.ui.olvidarClave.OlvidarClaveActivity;
 import com.nombreempresa.estudioagenda.ui.registro.RegistroActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -43,5 +43,23 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+//        binding.btOlvidoClave.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String email = binding.etLoginEmail.getText().toString();
+//                if (email.isEmpty()) {
+//                    Toast.makeText(LoginActivity.this, "Ingrese su email", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    mv.recuperarClave(email);
+//                }
+//            }
+//        });
+
+        binding.btOlvidoClave.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, OlvidarClaveActivity.class);
+            startActivity(intent);
+        });
+
     }
 }

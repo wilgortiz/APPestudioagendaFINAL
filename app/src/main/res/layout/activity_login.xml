@@ -25,7 +25,7 @@
         android:layout_marginTop="9dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_border"
-        android:text="jesus@gmail.com"
+        android:text="wilgortiz@gmail.com"
         android:hint="Ingrese su Usuario"
         android:paddingLeft="10dp"
         android:textStyle="italic"
@@ -45,6 +45,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btLogin" />
+
+    <Button
+        android:id="@+id/btOlvidoClave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toBottomOf="@+id/btRegistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -69,7 +81,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_border"
         android:hint="Ingrese su Contraseña"
-        android:text="12345678Aa"
+        android:text="A123456789"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textStyle="italic"

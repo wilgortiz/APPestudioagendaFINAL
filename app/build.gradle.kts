@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.nombreempresa.estudioagenda"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.wilgon.estudioagenda"
@@ -23,8 +23,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     buildFeatures {
         viewBinding = true
@@ -52,6 +52,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14")
     implementation("androidx.lifecycle:lifecycle-viewmodel-android:2.8.7")
+    implementation("androidx.activity:activity:1.10.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
